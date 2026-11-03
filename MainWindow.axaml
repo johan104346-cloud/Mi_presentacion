@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MiPresentacion.MainWindow"
+        Title="MiPresentacion" Width="420" Height="520"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <Border Padding="20">
+        <StackPanel Spacing="12">
+            <TextBlock Text="Mi primera aplicación gráfica" 
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,10"/>
+
+            <!-- Formulario de entrada -->
+            <TextBlock Text="Nombre:" FontWeight="SemiBold"/>
+            <TextBox x:Name="TxtNombre" Watermark="Ingrese su nombre"/>
+
+            <TextBlock Text="Apellido:" FontWeight="SemiBold"/>
+            <TextBox x:Name="TxtApellido" Watermark="Ingrese su apellido"/>
+
+            <TextBlock Text="Edad:" FontWeight="SemiBold"/>
+            <TextBox x:Name="TxtEdad" Watermark="Ingrese su edad"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10" Margin="0,10,0,10">
+                <Button x:Name="BtnPresentarme" Content="Presentarme" Click="BtnPresentarme_Click"/>
+                <Button x:Name="BtnCambiarSaludo" Content="Cambiar saludo" Click="BtnCambiarSaludo_Click"/>
+                <Button x:Name="BtnLimpiar" Content="Limpiar" Click="BtnLimpiar_Click"/>
+            </StackPanel>
+
+            <Border Background="#F4F4F4" CornerRadius="5" Padding="12" Margin="0,5,0,0">
+                <TextBlock x:Name="TxtResultado" 
+                           Text="Complete el formulario y presione 'Presentarme'." 
+                           TextWrapping="Wrap" 
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center"
+                           FontSize="14"/>
+            </Border>
+        </StackPanel>
+    </Border>
+</Window>
